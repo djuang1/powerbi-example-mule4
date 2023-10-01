@@ -26,7 +26,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</power-bi-rest:config>
 	<configuration-properties doc:name="Configuration properties" doc:id="02fc338c-f2cd-4fdb-b0a8-53cab00ee9b3" file="mule-properties.yaml" />
 	<flow name="powerbi-example-mule4Flow" doc:id="953e5f43-6e6f-4850-bed1-30525fb5bd72" >
-		<http:listener doc:name="Listener" doc:id="8aac7996-3804-4a8b-b628-927d952d067d" config-ref="HTTP_Listener_config" path="/reports"/>
+		<http:listener doc:name="/reports" doc:id="8aac7996-3804-4a8b-b628-927d952d067d" config-ref="HTTP_Listener_config" path="/reports"/>
 		<power-bi-rest:get-reports doc:name="Get Reports" doc:id="613414e4-e92e-4b05-b3ac-4adc5bbfcbf1" config-ref="Power_Bi_Rest_Connector_Config"/>
 		<ee:transform doc:name="Transform Message" doc:id="63be911c-b49a-432b-bc18-4d46b82c45d9" >
 			<ee:message >
